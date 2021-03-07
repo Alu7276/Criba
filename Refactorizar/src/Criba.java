@@ -6,23 +6,16 @@ public class Criba {
 		
 		// Declaraciones
 		int i,j;
-	    
+		//Tamaño del array
+		int dim = max + 1;
+		
+		nuevoArray(dim);
+		// Criba
+		cribar(dim);
 		
 		
 		if (max >= 2) {
-			//Tamaño del array
-			int dim = max + 1;
-		
-			nuevoArray(dim);
-	
-			// Criba
-			cribar(dim);
-
-			
-			
-
-			
-			// Rellenar el vector de números primos
+		    // Crear y rellenar el vector de números primos
 			int[] primos = new int[cuentaPrimos(dim)];
 			for (i = 0, j = 0; i < dim; i++) {
 				if (esPrimo[i]) {
@@ -73,7 +66,7 @@ public class Criba {
 			}
 		}
 		return cuenta;
-	}
+	}	
 	
 }
 	
