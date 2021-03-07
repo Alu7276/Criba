@@ -1,21 +1,20 @@
 public class Criba {
+	private static boolean[] esPrimo;
+	
 	// Generar números primos de 1 a max
 	public static int[] generarPrimos (int max) {
 		
+		// Declaraciones
 		int i,j;
+	    
+		
 		
 		if (max >= 2) {
-		    // Declaraciones
-			int dim = max + 1; //Tamaño del array
-			boolean[] esPrimo = new boolean[dim];
-			
-			// Inicializar el array
-			for (i = 0; i < dim; i++) {
-				esPrimo[i] = true;
-			}
-			
-			// Eliminar el 0 y el 1, que no son primos
-			esPrimo[0] = esPrimo[1] = false;
+			//Tamaño del array
+			int dim = max + 1;
+			nuevoArray(dim);
+	
+		
 			
 			// Criba
 			for (i = 2; i<Math.sqrt(dim) + 1; i++) {
@@ -49,6 +48,22 @@ public class Criba {
 			// vector vacío
 		}
 	}
+	
+	public static boolean[] nuevoArray (int tam) {
+		// Inicializar el array
+		esPrimo = new boolean[tam];
+		
+		for (int i = 0; i < tam; i++) {
+			esPrimo[i] = true;
+		}
+		
+		// Eliminar el 0 y el 1, que no son primos
+				
+		esPrimo[0] = esPrimo[1] = false;
+				
+		return esPrimo;
+	}
+	
 }
 	
 

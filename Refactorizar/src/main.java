@@ -15,7 +15,7 @@ public class main {
 			if (i%10 == 0) {
 				System.out.println();
 			}
-			System.out.print(i+1+"\t");
+			System.out.print(i + 1 + "\t");
 		}
 		
 		vector = Criba.generarPrimos(dato);
@@ -25,7 +25,7 @@ public class main {
 			if (i%10 == 0) {
 				System.out.println();
 				}
-			System.out.print(vector[i]+"\t");
+			System.out.print(vector[i] + "\t");
 		}
 
 	}
