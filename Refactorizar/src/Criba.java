@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class Criba
 {
-
 	// Generar números primos de 1 a max
 	public static int[] generarPrimos (int max)
 	{
