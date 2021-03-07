@@ -12,19 +12,12 @@ public class Criba {
 		if (max >= 2) {
 			//Tamaño del array
 			int dim = max + 1;
+		
 			nuevoArray(dim);
 	
-		
-			
 			// Criba
-			for (i = 2; i<Math.sqrt(dim) + 1; i++) {
-				if (esPrimo[i]) {
-					//Eliminar los múltiplos de i
-					for (j = 2 * i; j < dim; j+=i) { 
-						esPrimo[j] = false;
-					}
-				}
-			}
+			cribar(dim);
+
 			
 			// ¿Cuántos primos hay?
 			int cuenta = 0;
@@ -62,6 +55,18 @@ public class Criba {
 		esPrimo[0] = esPrimo[1] = false;
 				
 		return esPrimo;
+	}
+	
+	public static void cribar (int tam) {
+		for (int i = 2; i<Math.sqrt(tam) + 1; i++) {
+			if (esPrimo[i]) {
+				//Eliminar los múltiplos de i
+				for (int j = 2 * i; j < tam; j+=i) { 
+					esPrimo[j] = false;
+				}
+			}
+		}
+		
 	}
 	
 }
