@@ -1,7 +1,26 @@
+package main;
+
+/**
+ * 
+ * Clase principal main. 
+ * 
+ * @author Alu7276
+ * @version 1.0, 07/03/2021
+ *  
+ */
+
 import java.util.Scanner;
 
-public class main {
+import criba.Criba;
 
+public class Main {
+	
+	/**
+	 * Se pide un número y devuelve un vector inicial de 0 al número y otro vector con los números primos hasta ese número. 
+	 * 
+	 * @param args Valor introducido por teclado
+	 */
+	
 	public static void main(String[] args) {
 		
 		Scanner teclado = new Scanner(System.in);
